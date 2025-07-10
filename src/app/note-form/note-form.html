@@ -1,0 +1,23 @@
+
+<h2 class="text-center">Registrar Tarea</h2>
+<form class="container mb-5" >
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label" >TItulo de la Nota</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese Titulo de la nota" #tituloNota>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label" >Contenido de la Nota</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese el contenido de la nota" #contenidoNota>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label" >Fecha De Inicio</label>
+        <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese la fecha de inicio" #FechaNota>
+    </div>
+
+    <button class="btn btn-success" (click)="registrarNotas($event,tituloNota.value,contenidoNota.value,FechaNota.value,FechaNota.value)"> Registrar Nota</button>
+</form>
+
+
+<button class="btn btn-primary " routerLink="/listarTareas">Listar Notas</button>

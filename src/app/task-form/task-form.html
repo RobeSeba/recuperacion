@@ -1,0 +1,18 @@
+<h2 class="text-center">Registrar Tarea</h2>
+<form class="container mb-5" >
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label" >nombre de la tarea</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese nombre de la Tarea" #nombreTarea>
+    </div>
+
+    <select class="form-select mb-3" aria-label="Default select example" #estadoTarea>
+        <option selected disabled>Seleccionar Estado</option>
+        <option value="Pendiente">Pendiente</option>
+        <option value="Realizado">Realizado</option>
+    </select>
+
+    <button class="btn btn-success" (click)="registrarTareas($event,nombreTarea.value,estadoTarea.value)"> Registrar Tarear</button>
+</form>
+
+
+<button class="btn btn-primary " routerLink="/listar">Listar Tarea</button>
